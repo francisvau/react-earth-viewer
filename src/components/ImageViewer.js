@@ -1,24 +1,29 @@
 import { useState, useEffect } from "react"
+import DateSlider from "./DateSlider"
+import GenerateButton from "./GenerateButton"
 
 const ImageViewer = () => {
 
-  const [data, setData] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [dates, setDates] = useState([])
+  const [image, setImage] = useState()
 
   useEffect(() => {
     const fetchEvents = async () => {
-        setLoading(true)
         const res = await fetch('https://epic.gsfc.nasa.gov/api/natural/all')
-        const dates = await res.json()
-        setData(dates.map(e => e["date"]))
-        setLoading(false)
+        const data = await res.json()
+        setDates(data.map(e => e["date"]).reverse())
     }
     fetchEvents()
   }, [])
 
+  const getImage = () => {
+
+  }
+
   return (
-    <div>
-        {data.length === 0 ? "another" : "no one"}
+    <div className="app__imageviewer">
+        <DateSlider dates={dates}/>
+        <GenerateButton onClick={getImage}/>
     </div>
   )
 }
