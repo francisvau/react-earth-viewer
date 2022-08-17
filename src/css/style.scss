@@ -12,6 +12,12 @@ body {
     font-family: $header-font;
 }
 
+img {
+    opacity: 0.3;
+    width: 30px;
+    height: 30px;
+}
+
 .app {
     display: flex;
     flex-direction: column;
