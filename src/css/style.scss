@@ -14,11 +14,6 @@ body {
     font-family: $header-font;
 }
 
-img {
-    width: 100px;
-    height: 100px;
-}
-
 .app {
     display: flex;
     flex-direction: column;
@@ -50,7 +45,7 @@ img {
         }
 
         .imageviewer__loading {
-            width: 1000px;
+            
         }
     }
 }

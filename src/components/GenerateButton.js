@@ -2,7 +2,7 @@
 const GenerateButton = ({ onClick }) => {
   return (
     <>
-      <button className="components__generate-button" onClick={onClick}>Find Image</button>
+      <button className="components__generate-button" onClick={onClick}>Load Image</button>
     </>
   )
 }
