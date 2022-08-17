@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import DateSlider from "./DateSlider"
 import GenerateButton from "./GenerateButton"
+import Loading from "./Loading"
 import Image from "./Image"
 
 const ImageViewer = () => {
@@ -30,9 +31,14 @@ const ImageViewer = () => {
 
   return (
     <div className="app__imageviewer">
-        <DateSlider date={date} dates={dates} onChange={setDate}/>
-        <GenerateButton onClick={getImage}/>
-        <Image image={image} date={date}/>
+      {dates.length
+        ? <div class="imageviewer_components">
+            <DateSlider date={date} dates={dates} onChange={setDate}/>
+            <GenerateButton onClick={getImage}/>
+            <Image image={image} date={date}/>
+          </div>
+        : <Loading />
+      }
     </div>
   )
 }
