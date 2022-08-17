@@ -1,0 +1,16 @@
+.components__generate-button {
+    display: flex;
+    justify-content: center;
+    font-family: $header-font;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    padding: 0.5em 2em;
+    background-color: $text-color;
+    box-shadow: 0.1em 0.1em 1em 0.2em #888;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.components__generate-button:hover {
+    background-color: darken($text-color, 10%);
+}

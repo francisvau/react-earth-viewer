@@ -1,4 +1,6 @@
 @import 'config';
+@import 'inputs';
+@import 'buttons';
 
 * {
     margin: 0;
@@ -35,29 +37,15 @@ img {
         width: 60%;
 
         .imageviewer__components {
-            .components__dateslider {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-                margin-top: 3em;
-
-                input[type='range'] {
-                    -webkit-appearance: none;
-                    width: 100%;
-                    border-radius: 5px;
-                    height: 0.2em;
-                    background-color: $text-color;
-                    box-shadow: 0.2em 0.2em 3em 0.5em #888888;;
-                }
-
-                input[type=range]::-webkit-slider-thumb {
-                    -webkit-appearance: none;
-                    height: 2em;
-                    cursor: pointer;
-                }
-
-                input[type=range]::-moz-range-thumb {
-                    height: 2em;
-                    cursor: pointer;
-                }
+            .components__image {
+                z-index: -1;
+                width: 50%;
+                height: 50%;
             }
         }
 
