@@ -14,6 +14,7 @@ const ImageViewer = () => {
         const res = await fetch('https://epic.gsfc.nasa.gov/api/natural/all')
         const data = await res.json()
         setDates(data.map(e => e["date"]).reverse())
+        setDate(data[0]["date"])
     }
     fetchEvents()
   }, [])
