@@ -1,6 +1,6 @@
 import loading from '../img/loading.gif'
 
-const Spinner = () => {
+const Loading = () => {
   return (
     <>
       <img className="imageviewer__loading" src={loading} alt="loading" />
@@ -8,4 +8,4 @@ const Spinner = () => {
   )
 }
 
-export default Spinner
+export default Loading

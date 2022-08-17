@@ -32,7 +32,7 @@ const ImageViewer = () => {
   return (
     <div className="app__imageviewer">
       {dates.length
-        ? <div class="imageviewer_components">
+        ? <div className="imageviewer__components">
             <DateSlider date={date} dates={dates} onChange={setDate}/>
             <GenerateButton onClick={getImage}/>
             <Image image={image} date={date}/>
